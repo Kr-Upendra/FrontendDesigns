@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: $fontFamily;
+  width: 100%;
+  min-width: 400px;
+  min-height: 100vh;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: $lightWhite;
+}
+
+ul {
+  list-style-type: none;
+}

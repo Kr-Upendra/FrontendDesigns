@@ -1,0 +1,43 @@
+@mixin absolutePosition {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin contactMessage {
+  font-size: 1.45rem;
+  color: $lightBlack;
+}
+
+@mixin inputSubmitBtn {
+  margin-bottom: 0;
+  color: $whiteColor;
+  padding: 0.65rem 0;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+@mixin inputbox {
+  width: 97%;
+  padding: 0.7rem 0.4rem;
+  font-family: $fontFamily;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: $borderRadius3;
+}
+
+@mixin linkHover {
+  color: $lightAqua;
+  text-decoration: underline;
+}
+
+@mixin buttonStyle($property, $value) {
+  font-size: 1rem;
+  $property: $value;
+  padding: 0.8rem 2rem;
+  border-radius: 3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,25 @@
+.section {
+  padding: 6rem 2rem;
+
+  &__heading {
+    text-align: center;
+
+    &--main {
+      @include mainHeading(3rem, 2px);
+    }
+
+    &--text {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .section {
+    &__heading {
+      &--main {
+        @include mainHeading(2rem, 1px);
+      }
+    }
+  }
+}

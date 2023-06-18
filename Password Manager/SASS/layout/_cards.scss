@@ -1,0 +1,66 @@
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
+  justify-content: center;
+  gap: 1rem;
+  row-gap: 5rem;
+
+  &__card {
+    padding: 3rem 1.25rem;
+    border-radius: 0.1rem;
+    box-shadow: $boxShadow;
+    text-align: center;
+
+    &:nth-child(2) {
+      background-color: $lightAqua;
+      color: $whiteColor;
+      & .pricebtn {
+        background-color: $whiteColor;
+        color: $lightAqua;
+      }
+      & ul li {
+        color: $whiteColor;
+      }
+      & hr {
+        border: 1px solid white;
+      }
+    }
+
+    &--details {
+      & h4 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &--pricebtn {
+      margin: 3rem 0 3rem;
+      & .price {
+        font-size: 4rem;
+        font-weight: 600;
+        display: block;
+        line-height: 1;
+        margin-bottom: 2rem;
+      }
+
+      & .pricebtn {
+        background-color: $lightAqua;
+      }
+    }
+    &--features {
+      margin: 2rem 0 0;
+      & ul li {
+        font-weight: 600;
+        color: $lightBlack;
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// 9451473590

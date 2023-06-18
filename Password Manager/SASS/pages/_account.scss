@@ -1,0 +1,305 @@
+.account__nav {
+  background-color: rgb(84, 255, 226);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.5rem;
+  box-shadow: $boxShadow;
+  z-index: 10;
+
+  &--logo {
+    font-size: 1.65rem;
+    color: black;
+  }
+
+  & ul {
+    display: flex;
+    padding-right: 3rem;
+
+    & li a {
+      margin-left: 2rem;
+      color: $whiteColor;
+      padding: 0.45rem 1rem;
+      border-radius: 3rem;
+      &:first-child {
+        background-color: $navLinkBgColor;
+      }
+    }
+  }
+}
+
+.main {
+  padding-top: 6rem;
+  &__container {
+    padding: 0 2rem 3rem;
+    position: relative;
+
+    &--heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      & h3 {
+        font-size: 1.25rem;
+        color: $lightBlack;
+        margin-right: auto;
+      }
+
+      &-addnew {
+        @include buttonStyle(color, $whiteColor);
+        background-color: $lightAqua;
+        color: $whiteColor !important;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    &--cards {
+      padding: 2rem 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      row-gap: 2rem;
+      &-card {
+        padding: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 0.35rem;
+
+        &__img {
+          object-fit: fill;
+          position: relative;
+          margin-bottom: 0.5rem;
+
+          & img {
+            border-radius: 0.35rem;
+            width: 100%;
+            height: 180px;
+            filter: blur(3px);
+            transition: filter 0.35s ease-in-out, transform 0.35s ease-in-out;
+
+            &:hover {
+              filter: blur(0px);
+              transform: scale(1.05) rotate(2deg);
+            }
+          }
+          &--btns {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & i {
+              margin: 0.5rem 0;
+              font-size: 1.35rem;
+              color: $lightAqua;
+              cursor: pointer;
+              transition: color 0.35s ease-in-out, transform 0.35s ease-in-out;
+
+              &:last-child {
+                font-size: 1rem;
+                padding: 0.05rem 0.35rem;
+                border: 2px solid $lightAqua;
+                border-radius: 0.25rem;
+                transition: border 0.35s ease-in-out;
+
+                &:hover {
+                  border: 2px solid $whiteColor;
+                }
+              }
+
+              &:hover {
+                color: $whiteColor;
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+
+        &__username,
+        &__email,
+        &__password,
+        &__site {
+          display: flex;
+          margin: 1rem 0;
+          justify-content: space-between;
+
+          & span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: $lightBlack;
+          }
+
+          & h5 {
+            font-weight: 600;
+            font-family: $headingFont;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.account__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.55rem 0 0.15rem;
+  & span {
+    font-size: 0.75rem;
+    color: $lightBlack;
+
+    & a {
+      color: $lightBlack;
+      font-size: 0.85rem;
+      &:hover {
+        color: $lightAqua;
+      }
+    }
+  }
+}
+
+.modelbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  transition: display 0.45s ease-in-out;
+  &__formbox {
+    margin-top: 2rem;
+    width: 30%;
+    padding: 1.5rem 1.5rem 0.75rem;
+    border-radius: 0.3rem;
+    background-color: rgba($lightAqua, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    position: relative;
+    &--closeicon {
+      position: absolute;
+      top: 0;
+      right: -6%;
+      & i {
+        color: $lightAqua;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+
+    &--heading {
+      text-align: center;
+      margin-bottom: 0.75rem;
+      & h3 {
+        color: $whiteColor;
+        font-size: 1rem;
+      }
+    }
+    &--form {
+      &-input {
+        margin: 0.65rem 0;
+      }
+    }
+
+    &--showdes {
+      margin-bottom: 1rem;
+      & p {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $lightWhite;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+.layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.568);
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .main {
+    &__container {
+      &--cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  .modelbox {
+    &__formbox {
+      width: 45%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .main {
+    &__container {
+      &--cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  .modelbox {
+    &__formbox {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .account__nav {
+    padding: 0.95rem 1rem;
+
+    &--logo {
+      font-size: 1.15rem;
+    }
+
+    & ul {
+      padding-right: 2rem;
+      & li a {
+        padding: 0.45rem 0.8rem;
+        font-size: 0.85rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .main {
+    &__container {
+      &--heading {
+        flex-direction: column-reverse;
+        align-items: start;
+
+        &-addnew {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &--cards {
+        grid-template-columns: repeat(1, 1fr);
+        &-card {
+          max-width: 350px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .modelbox {
+    &__formbox {
+      width: 80%;
+    }
+  }
+}

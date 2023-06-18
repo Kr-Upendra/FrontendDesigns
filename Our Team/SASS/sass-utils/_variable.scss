@@ -1,0 +1,31 @@
+// Colors
+$whiteClr: #fff;
+$blackClr: #000;
+$liteWhite: rgba(255, 255, 255, 0.664);
+$veryLiteBlck: rgba(0, 0, 0, 0.055);
+$btnTxtClr: #fff;
+$btnBgClr: #000;
+$btnBorderClr: #fff;
+$socialLinkClr: #000;
+$socialBgClr: #fff;
+$borderApx: 1px solid rgba(0, 0, 0, 0.1);
+
+// Font Families
+$fontFamily: "Raleway", sans-serif;
+$headingFont: "Merriweather", serif;
+
+// Font Weights
+$weight600: 600;
+$weight500: 500;
+$weight400: 400;
+$weight300: 300;
+
+// Image Links
+$headerBgImage: url("/images/computer.jpg");
+
+// Border Radius
+$borderRadius: 0.3rem !default;
+
+// Box Shadow
+$boxShadow: rgba(50, 100, 255, 0.1) 0px 10px 15px -3px,
+  rgba(50, 100, 255, 0.05) 0px 4px 6px -2px;

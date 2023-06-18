@@ -1,0 +1,75 @@
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 450px));
+  justify-content: center;
+  gap: 10rem;
+  row-gap: 3rem;
+
+  &__form {
+    &--title {
+      margin: 1rem 0;
+      & h4 {
+        @include contactMessage;
+      }
+    }
+    & .form {
+      &__input {
+        width: 98%;
+        margin: 1rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: $fontFamily;
+        padding: 0.75rem 0;
+        padding-left: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid $btnBgColor;
+
+        &[type="submit"] {
+          width: 100%;
+          background-color: $lightAqua;
+          color: $whiteColor;
+          border-radius: 3rem !important;
+          border: none;
+          cursor: pointer;
+        }
+      }
+      & textarea {
+        resize: none;
+      }
+    }
+  }
+
+  &__option {
+    &--title {
+      margin: 1rem 0;
+      & h4 {
+        @include contactMessage;
+      }
+    }
+
+    & .options {
+      margin: 1rem 0;
+      &__common {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+
+        & h1 {
+          margin: 1rem 0;
+          color: $lightBlack;
+        }
+
+        & span {
+          margin-bottom: 0.75rem;
+          cursor: pointer;
+          font-weight: 500;
+
+          &:hover {
+            text-decoration: underline;
+            color: $lightAqua;
+          }
+        }
+      }
+    }
+  }
+}

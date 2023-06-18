@@ -1,0 +1,21 @@
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__heading {
+    margin-bottom: 0.75rem;
+    & h1 {
+      text-transform: capitalize;
+      font-family: $headingFont;
+    }
+  }
+  &__text {
+    margin: 1.5rem 0 3rem 0;
+  }
+
+  &__btn {
+    margin-bottom: 2rem;
+  }
+}

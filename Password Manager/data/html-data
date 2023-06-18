@@ -1,0 +1,59 @@
+<!-- 
+
+<form class="formbox__content--form modelbox__formbox--form">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your username"
+            class="formbox__content--form-input modelbox__formbox--form-input"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            class="formbox__content--form-input modelbox__formbox--form-input"
+            placeholder="Your email"
+          />
+          <input
+            type="password"
+            name="password"
+            required
+            placeholder="Your password"
+            class="formbox__content--form-input modelbox__formbox--form-input"
+          />
+          <input
+            type="text"
+            name="website"
+            required
+            placeholder="Website name"
+            class="formbox__content--form-input modelbox__formbox--form-input"
+          />
+
+          <textarea
+            style="resize: none"
+            class="formbox__content--form-input modelbox__formbox--form-input"
+            name="description"
+            rows="2"
+            placeholder="Short Description"
+          ></textarea>
+
+          <input
+            type="submit"
+            value="Add New Password"
+            class="btn formbox__content--form-input modelbox__formbox--form-input signupbtn"
+          />
+        </form>
+
+         <div class="modelbox__formbox--showdes">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            asperiores magni repellat necessitatibus libero adipisci dolore
+            ratione delectus, recusandae beatae at mollitia odio optio corrupti
+            molestias dolorem a deserunt suscipit saepe, in nam quas nisi
+            consequatur. Voluptates labore, id porro exercitationem, eligendi ex
+            quas commodi repudiandae laudantium neque placeat dignissimos?
+          </p>
+        </div>
+
+ -->

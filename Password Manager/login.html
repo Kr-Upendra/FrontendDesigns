@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Login -- Password Keeper</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a class="navbar__logo" href="/overview.html">Password Keeper</a>
+      </nav>
+      <div class="formbox">
+        <div class="formbox__content">
+          <div class="formbox__content--heading">
+            <h3>Login Form</h3>
+          </div>
+          <form class="formbox__content--form">
+            <input
+              type="email"
+              name="email"
+              required
+              class="formbox__content--form-input"
+              placeholder="Your email"
+            />
+            <input
+              type="password"
+              name="password"
+              required
+              placeholder="Your password"
+              class="formbox__content--form-input"
+            />
+            <input
+              type="submit"
+              value="Signup"
+              class="btn formbox__content--form-input signupbtn"
+            />
+          </form>
+          <div class="formbox__content--thing">
+            <div class="formbox__content--thing-signinlink">
+              <span>Don't have an account ? </span>
+              <a href="/signup.html">Signup</a>
+            </div>
+            <div class="formbox__content--thing-signinlink">
+              <a href="/forgotPassword.html">Forgot your password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section footer__section">
+      <footer class="footer">
+        <div class="footer__common footer__followus">
+          <h4>Follow Us</h4>
+          <a href="#">Github</a>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Youtube</a>
+        </div>
+        <div class="footer__common footer__policy">
+          <h4>Our Policies</h4>
+          <a href="#">Policy</a>
+          <a href="#">Privacy</a>
+          <a href="#">Career</a>
+          <a href="#">Information</a>
+        </div>
+        <div class="footer__common footer__tools">
+          <h4>Other Tools</h4>
+          <a href="#">Password Generator</a>
+          <a href="#">Blogs</a>
+          <a href="#">Other tools</a>
+        </div>
+      </footer>
+      <div class="footer__section--text">
+        <span>All Rights Reserved. Made with ❣</span>
+      </div>
+    </section>
+  </body>
+  <script src="Scripts/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ delay: 300 });
+  </script>
+</html>

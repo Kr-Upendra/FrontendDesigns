@@ -1,0 +1,55 @@
+.footer {
+  background-color: #ff54542a;
+  position: relative;
+
+  &__box {
+    text-align: center;
+
+    &--link {
+      font-size: 2rem;
+      margin: 0 0.7rem;
+
+      & i {
+        padding: 0.5rem;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        width: 40px;
+      }
+    }
+  }
+
+  &__copytext {
+    position: absolute;
+    bottom: 0;
+    padding: 0.6rem 0;
+    width: 90%;
+    text-align: center;
+
+    &--para {
+      color: $blackClr;
+      font-weight: $weight500;
+
+      &-home {
+        margin: 0 0.3rem;
+        color: black;
+        font-family: $headingFont;
+        font-weight: $weight600;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__box {
+    text-align: left;
+    &--link {
+      display: block;
+      margin: 1rem 0;
+      text-align: center;
+    }
+  }
+  .footer__copytext--para {
+    font-size: 0.8rem;
+  }
+}

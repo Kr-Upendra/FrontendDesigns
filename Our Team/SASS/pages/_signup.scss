@@ -1,0 +1,111 @@
+.formsection {
+  padding: 7rem 2rem 3rem;
+
+  &__cont {
+    text-align: center;
+    &--box {
+      max-width: 350px;
+      min-width: 150px;
+      margin: auto;
+      padding: 2rem;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 0.3rem;
+      &-heading {
+        font-size: 1.25rem;
+        font-family: $headingFont;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+      }
+
+      &-text {
+        background-color: rgba(82, 2, 2, 0.062);
+        padding: 1rem;
+        margin: 1rem 0;
+        & p {
+          font-size: 0.95rem;
+          line-height: 1.5;
+          font-weight: $weight300;
+        }
+      }
+
+      &-alert {
+        padding: 1rem;
+        background-color: rgba(255, 0, 0, 0.103);
+        margin: 1rem 0;
+        display: none;
+        &[aria-hidden="false"] {
+          @include displeyProperty(block);
+        }
+
+        &__para {
+          font-size: 0.9rem;
+          line-height: 1.5;
+          font-weight: $weight300;
+        }
+      }
+      &-form {
+        text-align: center;
+        &__inputbox {
+          font-size: 1rem;
+          font-family: $fontFamily;
+          font-weight: $weight500;
+          margin-top: 1.3rem;
+          width: 90%;
+          padding: 0.6rem;
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 0.1rem;
+        }
+        &__btn {
+          @include displeyProperty(block);
+          width: 96.5%;
+          margin-top: 1.3rem;
+          margin-left: 6px;
+          padding: 0.7rem;
+          @include btnProperty($btnBgClr, $btnTxtClr, 1rem);
+        }
+      }
+      &-aluser {
+        margin-top: 1.3rem;
+        &[data-login="true"] {
+          margin-top: 1.3rem;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 1rem;
+        }
+        & span {
+          font-size: 0.95rem;
+        }
+        & a {
+          font-size: 0.95rem;
+        }
+      }
+      &-signupwith {
+        margin-top: 1rem;
+        & p {
+          font-size: 0.95rem;
+        }
+        &__options {
+          margin-top: 1rem;
+          & a {
+            margin: 0 0.2rem;
+            padding: 0.35rem 0.5rem;
+            border-radius: 3rem;
+            background-color: $btnBgClr;
+            color: $btnTxtClr;
+
+            &:nth-child(3) {
+              padding: 0.35rem 0.65rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .formsection {
+    padding: 7rem 0 3rem;
+  }
+}

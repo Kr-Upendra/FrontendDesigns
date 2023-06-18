@@ -1,0 +1,41 @@
+@mixin btnAfter($bgClr) {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: inherit;
+  background-color: $bgClr;
+}
+
+@mixin oneTransition($prop1) {
+  transition: $prop1 $timeWay;
+}
+
+@mixin twoTransition($prop1, $prop2) {
+  transition: $prop1 $timeWay, $prop2 $timeWay;
+}
+
+@mixin threeTransition($prop1, $prop2, $prop3) {
+  transition: $prop1 $timeWay, $prop2 $timeWay, $prop3 $timeWay;
+}
+
+@mixin relativeIndex() {
+  position: relative;
+  z-index: 1;
+}
+
+@mixin heightWidth($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin allZeroTopLeft($w, $h, $t, $l) {
+  @include heightWidth($w, $h);
+  top: $t;
+  left: $l;
+}
+
+@mixin allZeroBottomRight($w, $h, $b, $r) {
+  @include heightWidth($w, $h);
+  bottom: $b;
+  right: $r;
+}

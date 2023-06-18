@@ -1,0 +1,64 @@
+.header {
+  margin-top: 4rem;
+  height: 100vh;
+  @include backgroundProperty($headerBgImage);
+
+  &__content {
+    padding: 15rem 4rem;
+
+    &--heading {
+      color: $whiteClr;
+      font-size: 3rem;
+      font-weight: $weight600;
+      font-family: $headingFont;
+    }
+
+    &--text {
+      color: $whiteClr;
+      line-height: 3;
+      font-size: 1.15rem;
+      padding: 1rem 0;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0.6) 80%,
+        rgba(0, 0, 0, 0.2) 100%
+      );
+    }
+
+    &--btn {
+      text-transform: uppercase;
+      @include displeyProperty(block);
+      margin-top: 1rem;
+      padding: 0.7rem 1.3rem 0.6rem;
+      @include btnProperty($btnTxtClr, $btnBgClr, 1.15rem);
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .header {
+    &__content {
+      padding: 10rem 4rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    &__content {
+      padding: 8rem 2rem;
+
+      &--heading {
+        font-size: 2rem;
+      }
+
+      &--text {
+        padding: none;
+        background-image: none;
+        line-height: 2;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

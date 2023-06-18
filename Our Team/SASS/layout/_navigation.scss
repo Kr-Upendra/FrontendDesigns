@@ -1,0 +1,100 @@
+.navbar {
+  @include flexProperty(space-between, center);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $whiteClr;
+  padding: 1rem;
+  border-bottom: 1px solid $veryLiteBlck;
+  z-index: 1;
+
+  &__logo {
+    font-size: 1.6rem;
+    font-family: $headingFont;
+    color: $blackClr;
+    font-weight: $weight600;
+  }
+
+  &__navigation {
+    @include displeyProperty(flex);
+    padding-right: 2rem;
+
+    &--lies {
+      margin-left: 1.5rem;
+
+      &-links {
+        font-size: 0.95rem;
+        color: $blackClr;
+        text-transform: uppercase;
+        font-weight: $weight500;
+      }
+    }
+
+    &--close {
+      display: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      &-nav {
+        filter: invert(1);
+        width: 30px;
+      }
+    }
+  }
+
+  &__menu {
+    @include displeyProperty(none);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-right: 2rem;
+
+    &--icon {
+      width: 20px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    &__navigation {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 70%;
+      left: 0;
+      background-color: rgba(19, 19, 19, 0.5);
+      padding: 5rem 0;
+      align-items: center;
+      backdrop-filter: blur(1rem);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+
+      &[data-hide="true"] {
+        transform: translateX(0%);
+      }
+
+      &--lies {
+        margin: 0.8rem 0;
+
+        &-links {
+          color: $whiteClr;
+          font-weight: $weight400;
+        }
+      }
+
+      &--close {
+        @include displeyProperty(block);
+        position: absolute;
+        top: 70%;
+        right: 10%;
+      }
+    }
+
+    &__menu {
+      @include displeyProperty(block);
+    }
+  }
+}

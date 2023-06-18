@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Signup -- Password Keeper</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a class="navbar__logo" href="/overview.html">Password Keeper</a>
+      </nav>
+      <div class="formbox">
+        <div class="formbox__content">
+          <div class="formbox__content--heading">
+            <h3>Signup Form</h3>
+          </div>
+          <form class="formbox__content--form">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              class="formbox__content--form-input"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              required
+              class="formbox__content--form-input"
+              placeholder="Your email"
+            />
+            <input
+              type="password"
+              name="password"
+              required
+              placeholder="Your password"
+              class="formbox__content--form-input"
+            />
+            <input
+              type="text"
+              name="confirmPassword"
+              required
+              placeholder="Confirm you password"
+              class="formbox__content--form-input"
+            />
+            <input
+              type="submit"
+              value="Signup"
+              class="btn formbox__content--form-input signupbtn"
+            />
+          </form>
+          <div class="formbox__content--thing">
+            <div class="formbox__content--thing-signinlink">
+              <span>Already Have an account ? </span>
+              <a href="/login.html">Login</a>
+            </div>
+            <div class="formbox__content--thing-policy">
+              <span>
+                By signup, you accept our <a href="#">privacy</a> and
+                <a href="#">policy</a>.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+  <script src="Scripts/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ delay: 300 });
+  </script>
+</html>

@@ -1,0 +1,91 @@
+.formbox {
+  width: 30%;
+  margin: 4rem auto;
+
+  &__content {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 10px 18px;
+    padding: 2rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba($lightAqua, 0.2);
+    backdrop-filter: blur(10px);
+    &--heading {
+      text-align: center;
+      & h3 {
+        text-transform: uppercase;
+        color: $whiteColor;
+      }
+    }
+    &--form {
+      margin: 1.5rem 0 0.75rem;
+      &-alertMessage {
+        margin: 0.5rem 0 2rem;
+
+        & span {
+          font-size: 0.95rem;
+          color: $lightWhite;
+          font-weight: 500;
+        }
+      }
+      &-input {
+        @include inputbox;
+        outline: 1px solid $lightAqua;
+        margin-bottom: 2rem;
+        border: none;
+        &:last-child {
+          @include inputSubmitBtn;
+          &:hover {
+            transform: translateY(-5px);
+          }
+        }
+      }
+    }
+    &--thing {
+      padding: 0 0.5rem;
+      &-signinlink {
+        margin-bottom: 0.85rem;
+        & span {
+          color: $lightWhite;
+          font-size: 0.9rem;
+        }
+        & a {
+          font-size: 0.95rem;
+
+          &:hover {
+            @include linkHover;
+          }
+        }
+      }
+      &-policy {
+        & span {
+          font-size: 0.85rem;
+          color: $lightWhite;
+          & a {
+            font-size: 0.85rem;
+            color: $lightAqua;
+            &:hover {
+              @include linkHover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .formbox {
+    width: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .formbox {
+    width: 60%;
+  }
+}
+
+@media (max-width: 650px) {
+  .formbox {
+    width: 85%;
+  }
+}

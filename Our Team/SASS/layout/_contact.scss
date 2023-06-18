@@ -1,0 +1,130 @@
+.hero {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  &__container {
+    padding: 1rem 3rem;
+    text-align: center;
+    &--form {
+      &-inputbox {
+        width: 93%;
+        font-size: 1.25rem;
+        padding: 0.6rem 1rem;
+        margin-bottom: 2rem;
+        font-family: $fontFamily;
+        font-weight: $weight500;
+        color: $whiteClr;
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+        background-color: #000;
+      }
+      &-textarea {
+        width: 94%;
+        border-radius: 0.3rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0.5rem 0.8rem;
+        font-size: 1rem;
+        font-family: var(--fontFamily);
+        line-height: 1.7;
+        outline: none;
+        resize: none;
+      }
+      &-block {
+        @include displeyProperty(block);
+      }
+      &-submitbtn {
+        width: 99%;
+        margin-top: 2rem;
+        font-family: $headingFont;
+        padding: 0.9rem 0;
+        @include btnProperty($btnBgClr, $btnTxtClr, 1rem);
+      }
+    }
+
+    &--type {
+      margin-top: 2rem;
+      &-phones {
+        &[data-email="true"] {
+          margin-top: 3rem;
+        }
+        &[data-address="true"] {
+          margin-top: 3rem;
+        }
+        &__hr {
+          width: 50%;
+          margin-top: 0.5rem;
+          margin-left: 25%;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        &__heading {
+          font-size: 1.3rem;
+        }
+        &__numbox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 0.5rem;
+          &--icon {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            padding: 1rem;
+            background-color: $btnBgClr;
+            color: $btnTxtClr;
+            border-radius: 3rem;
+            &[data-location="true"] {
+              padding: 1rem 1.2rem;
+            }
+          }
+          &--container {
+            text-align: left;
+            &-nums {
+              font-size: 1.2rem;
+              line-height: 1.3;
+              & a {
+                color: $blackClr;
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .hero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__container {
+    padding: 0;
+  }
+  .hero__container--form-inputbox {
+    width: 90%;
+  }
+}
+
+@media (max-width: 300px) {
+  .hero__container {
+    padding: 0;
+  }
+  .hero__container--form-inputbox,
+  .hero__container--form-textarea {
+    width: 83%;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .hero__container--form-submitbtn {
+    width: 100%;
+  }
+
+  .hero__container--type-phones__numbox--container-nums,
+  .hero__container--type-phones__numbox--container-nums a {
+    font-size: 0.9rem;
+  }
+}

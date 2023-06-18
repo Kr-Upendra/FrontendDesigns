@@ -1,0 +1,35 @@
+@mixin flexProperty($justiVar, $alignVar) {
+  display: flex;
+  justify-content: $justiVar;
+  align-items: $alignVar;
+}
+
+@mixin displeyProperty($value) {
+  display: $value;
+}
+
+@mixin backgroundProperty($imgUrl) {
+  background-image: $imgUrl;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin btnProperty($bgColor, $color, $fSize) {
+  background-color: $bgColor;
+  color: $color;
+  font-size: $fSize;
+  border-radius: 3rem;
+}
+
+@mixin noneProperty {
+  outline: none;
+  border: none;
+}
+
+@mixin mainHeading($fontSize, $letterSpacing) {
+  font-size: $fontSize;
+  font-weight: $weight500;
+  font-family: $headingFont;
+  letter-spacing: $letterSpacing;
+}

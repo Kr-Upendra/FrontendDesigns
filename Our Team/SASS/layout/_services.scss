@@ -1,0 +1,37 @@
+.s__section {
+  background-image: linear-gradient(
+    rgba(60, 73, 0, 0.3),
+    rgba(81, 0, 83, 0.075),
+    rgba(4, 24, 51, 0.267)
+  );
+}
+
+.contactpage {
+  padding: 2.5rem 0.7rem;
+
+  & p {
+    margin: 1.65rem 0;
+  }
+}
+
+.cards {
+  &__contactpage {
+    @include btnProperty($btnBgClr, $btnTxtClr, 1.15rem);
+    padding: 0.7rem 1.5rem;
+  }
+
+  &__contactoption {
+    margin-top: 2rem;
+
+    &--link {
+      font-size: 1.8rem;
+      margin: 0 0.7rem;
+
+      & i {
+        padding: 0.6rem 0.5rem 0.5rem;
+        width: 30px;
+        @include btnProperty($btnTxtClr, $btnBgClr, 1);
+      }
+    }
+  }
+}

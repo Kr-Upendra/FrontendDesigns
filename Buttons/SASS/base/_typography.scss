@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  background-color: $bodyClr;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #003d47;
+  border-radius: 3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background: rgba($aqua, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00916c;
+}

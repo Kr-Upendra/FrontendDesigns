@@ -1,0 +1,826 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@300;400;500;600;700&display=swap");
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::selection {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+hr {
+  width: 80%;
+  margin-left: 10%;
+  border: 1px solid rgba(0, 0, 0, 0.089);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.055);
+  z-index: 1;
+}
+.navbar__logo {
+  font-size: 1.6rem;
+  font-family: "Merriweather", serif;
+  color: #000;
+  font-weight: 600;
+}
+.navbar__navigation {
+  display: flex;
+  padding-right: 2rem;
+}
+.navbar__navigation--lies {
+  margin-left: 1.5rem;
+}
+.navbar__navigation--lies-links {
+  font-size: 0.95rem;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.navbar__navigation--close {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.navbar__navigation--close-nav {
+  filter: invert(1);
+  width: 30px;
+}
+.navbar__menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-right: 2rem;
+}
+.navbar__menu--icon {
+  width: 20px;
+}
+
+@media (max-width: 750px) {
+  .navbar__navigation {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    left: 0;
+    background-color: rgba(19, 19, 19, 0.5);
+    padding: 5rem 0;
+    align-items: center;
+    backdrop-filter: blur(1rem);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .navbar__navigation[data-hide=true] {
+    transform: translateX(0%);
+  }
+  .navbar__navigation--lies {
+    margin: 0.8rem 0;
+  }
+  .navbar__navigation--lies-links {
+    color: #fff;
+    font-weight: 400;
+  }
+  .navbar__navigation--close {
+    display: block;
+    position: absolute;
+    top: 70%;
+    right: 10%;
+  }
+  .navbar__menu {
+    display: block;
+  }
+}
+.header {
+  margin-top: 4rem;
+  height: 100vh;
+  background-image: url("/images/computer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header__content {
+  padding: 15rem 4rem;
+}
+.header__content--heading {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Merriweather", serif;
+}
+.header__content--text {
+  color: #fff;
+  line-height: 3;
+  font-size: 1.15rem;
+  padding: 1rem 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0.2) 100%);
+}
+.header__content--btn {
+  text-transform: uppercase;
+  display: block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.3rem 0.6rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.15rem;
+  border-radius: 3rem;
+}
+
+@media (max-width: 750px) {
+  .header__content {
+    padding: 10rem 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .header__content {
+    padding: 8rem 2rem;
+  }
+  .header__content--heading {
+    font-size: 2rem;
+  }
+  .header__content--text {
+    padding: none;
+    background-image: none;
+    line-height: 2;
+    font-size: 0.9rem;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 750px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.memberform__card {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
+}
+.memberform__card--title {
+  margin: 0.7rem;
+  font-size: 1.55rem;
+  font-family: "Merriweather", serif;
+}
+.memberform__card--about {
+  margin: 0.4rem 0 1.5rem;
+  font-size: 0.85rem;
+  font-weight: weight300;
+}
+.memberform__card--form-inputbox {
+  font-size: 1.05rem;
+  width: 90%;
+  padding: 0.5rem 0.35rem;
+  font-family: fontFamily;
+  border-radius: 0.15rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+.memberform__card--form-inputbox[type=email] {
+  margin: 2rem 0;
+}
+.memberform__card--form-inputbox[type=file] {
+  position: relative;
+}
+.memberform__card--form-inputbox[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.memberform__card--form-inputbox[type=file]::before {
+  content: "Select Your Resume";
+  display: inline-block;
+  outline: none;
+  white-space: nowrap;
+  --webkit-user-select: none;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  padding: 0.7rem 0.35rem;
+}
+.memberform__card--form-submitbtn {
+  margin-top: 1.55rem;
+  padding: 0.8rem 1rem;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.15rem;
+  border-radius: 3rem;
+}
+
+.footer {
+  background-color: rgba(255, 84, 84, 0.1647058824);
+  position: relative;
+}
+.footer__box {
+  text-align: center;
+}
+.footer__box--link {
+  font-size: 2rem;
+  margin: 0 0.7rem;
+}
+.footer__box--link i {
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 40px;
+}
+.footer__copytext {
+  position: absolute;
+  bottom: 0;
+  padding: 0.6rem 0;
+  width: 90%;
+  text-align: center;
+}
+.footer__copytext--para {
+  color: #000;
+  font-weight: 500;
+}
+.footer__copytext--para-home {
+  margin: 0 0.3rem;
+  color: black;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .footer__box {
+    text-align: left;
+  }
+  .footer__box--link {
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .footer__copytext--para {
+    font-size: 0.8rem;
+  }
+}
+.section {
+  padding: 6rem 2rem;
+}
+.section__heading {
+  text-align: center;
+}
+.section__heading--main {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Merriweather", serif;
+  letter-spacing: 2px;
+}
+.section__heading--text {
+  font-size: 1rem;
+}
+
+@media (max-width: 300px) {
+  .section__heading--main {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: "Merriweather", serif;
+    letter-spacing: 1px;
+  }
+}
+.container {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in;
+  margin-top: 2rem;
+  position: relative;
+}
+.container:hover {
+  box-shadow: rgba(50, 100, 255, 0.1) 0px 10px 15px -3px, rgba(50, 100, 255, 0.05) 0px 4px 6px -2px;
+}
+
+.cards__img {
+  width: 130px;
+}
+.cards__heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-family: "Merriweather", serif;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+.cards__text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.cards__contactway {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.534), rgb(0, 0, 0));
+  opacity: 0;
+  transition: 1s;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.cards__contactway--btn {
+  background-color: #fff;
+  color: #000;
+  font-size: 1.15rem;
+  border-radius: 3rem;
+  padding: 0.6rem 2rem;
+  margin-bottom: 2rem;
+}
+.cards__aboutpage {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.15rem;
+  border-radius: 3rem;
+  padding: 0.7rem 1.5rem;
+}
+.cards:hover .cards__contactway {
+  opacity: 1;
+}
+
+.knowmore {
+  padding: 3rem 0.7rem;
+}
+.knowmore__text {
+  margin: 2rem 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 300px) {
+  .aboutCompany__text {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+}
+.s__section {
+  background-image: linear-gradient(rgba(60, 73, 0, 0.3), rgba(81, 0, 83, 0.075), rgba(4, 24, 51, 0.267));
+}
+
+.contactpage {
+  padding: 2.5rem 0.7rem;
+}
+.contactpage p {
+  margin: 1.65rem 0;
+}
+
+.cards__contactpage {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.15rem;
+  border-radius: 3rem;
+  padding: 0.7rem 1.5rem;
+}
+.cards__contactoption {
+  margin-top: 2rem;
+}
+.cards__contactoption--link {
+  font-size: 1.8rem;
+  margin: 0 0.7rem;
+}
+.cards__contactoption--link i {
+  padding: 0.6rem 0.5rem 0.5rem;
+  width: 30px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1;
+  border-radius: 3rem;
+}
+
+.members {
+  padding-bottom: 2rem;
+}
+.members__img {
+  width: 100%;
+  height: 230px;
+  border-radius: 0.3rem;
+  padding: 0;
+  filter: grayscale(1);
+}
+.members__name {
+  margin: 0.7rem;
+  font-family: "Merriweather", serif;
+}
+.members__tags {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.members__about {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.45;
+}
+.members__contactway {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 10%, rgba(0, 0, 0, 0.356) 30%, rgb(0, 0, 0) 100%);
+  opacity: 0;
+  transition: 1s;
+}
+.members__contactway--links {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+}
+.members__contactway--links-a {
+  margin: 0 0.75rem;
+}
+.members__contactway--links-a .fa {
+  color: #000;
+  background-color: #fff;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.members__contactway--links-a .fa-linkedin {
+  padding: 0.5rem 0.6rem;
+}
+.members:hover .members__contactway {
+  opacity: 1;
+}
+
+#work {
+  background-color: rgba(182, 61, 252, 0.151);
+}
+
+.projects {
+  padding: 0 0 1rem 0;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+.projects__imagebox--img {
+  width: 100%;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  filter: grayscale(1);
+}
+.projects__title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  font-family: "Merriweather", serif;
+  margin: 1rem 0 0.7rem;
+}
+.projects__langs--fa {
+  font-size: 2rem;
+  margin: 0.75rem 1rem 0;
+}
+.projects__about {
+  position: absolute;
+  top: 0;
+  border-radius: 0.3rem;
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.13));
+  padding: 1rem;
+  height: 92%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.projects__about--text {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+.projects__about--link {
+  padding: 0.6rem 4rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  border-radius: 3rem;
+}
+.projects__about--link-fa {
+  transition: transform 0.3s ease-in-out;
+}
+.projects__about--link:hover .projects__about--link-fa {
+  transform: translateX(30%);
+}
+.projects:hover .projects__about {
+  opacity: 1;
+}
+
+@media (max-width: 300px) {
+  .projects__box--links {
+    padding: 0.4rem 0;
+  }
+}
+.hero {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+}
+.hero__container {
+  padding: 1rem 3rem;
+  text-align: center;
+}
+.hero__container--form-inputbox {
+  width: 93%;
+  font-size: 1.25rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  background-color: #000;
+}
+.hero__container--form-textarea {
+  width: 94%;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  font-family: var(--fontFamily);
+  line-height: 1.7;
+  outline: none;
+  resize: none;
+}
+.hero__container--form-block {
+  display: block;
+}
+.hero__container--form-submitbtn {
+  width: 99%;
+  margin-top: 2rem;
+  font-family: "Merriweather", serif;
+  padding: 0.9rem 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 3rem;
+}
+.hero__container--type {
+  margin-top: 2rem;
+}
+.hero__container--type-phones[data-email=true] {
+  margin-top: 3rem;
+}
+.hero__container--type-phones[data-address=true] {
+  margin-top: 3rem;
+}
+.hero__container--type-phones__hr {
+  width: 50%;
+  margin-top: 0.5rem;
+  margin-left: 25%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.hero__container--type-phones__heading {
+  font-size: 1.3rem;
+}
+.hero__container--type-phones__numbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.hero__container--type-phones__numbox--icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 3rem;
+}
+.hero__container--type-phones__numbox--icon[data-location=true] {
+  padding: 1rem 1.2rem;
+}
+.hero__container--type-phones__numbox--container {
+  text-align: left;
+}
+.hero__container--type-phones__numbox--container-nums {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.hero__container--type-phones__numbox--container-nums a {
+  color: #000;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 750px) {
+  .hero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .hero__container {
+    padding: 0;
+  }
+  .hero__container--form-inputbox {
+    width: 90%;
+  }
+}
+@media (max-width: 300px) {
+  .hero__container {
+    padding: 0;
+  }
+  .hero__container--form-inputbox,
+  .hero__container--form-textarea {
+    width: 83%;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .hero__container--form-submitbtn {
+    width: 100%;
+  }
+  .hero__container--type-phones__numbox--container-nums,
+  .hero__container--type-phones__numbox--container-nums a {
+    font-size: 0.9rem;
+  }
+}
+.button {
+  cursor: pointer;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+}
+
+.formsection {
+  padding: 7rem 2rem 3rem;
+}
+.formsection__cont {
+  text-align: center;
+}
+.formsection__cont--box {
+  max-width: 350px;
+  min-width: 150px;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+}
+.formsection__cont--box-heading {
+  font-size: 1.25rem;
+  font-family: "Merriweather", serif;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.formsection__cont--box-text {
+  background-color: rgba(82, 2, 2, 0.062);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.formsection__cont--box-text p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.formsection__cont--box-alert {
+  padding: 1rem;
+  background-color: rgba(255, 0, 0, 0.103);
+  margin: 1rem 0;
+  display: none;
+}
+.formsection__cont--box-alert[aria-hidden=false] {
+  display: block;
+}
+.formsection__cont--box-alert__para {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.formsection__cont--box-form {
+  text-align: center;
+}
+.formsection__cont--box-form__inputbox {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  margin-top: 1.3rem;
+  width: 90%;
+  padding: 0.6rem;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.1rem;
+}
+.formsection__cont--box-form__btn {
+  display: block;
+  width: 96.5%;
+  margin-top: 1.3rem;
+  margin-left: 6px;
+  padding: 0.7rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 3rem;
+}
+.formsection__cont--box-aluser {
+  margin-top: 1.3rem;
+}
+.formsection__cont--box-aluser[data-login=true] {
+  margin-top: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.formsection__cont--box-aluser span {
+  font-size: 0.95rem;
+}
+.formsection__cont--box-aluser a {
+  font-size: 0.95rem;
+}
+.formsection__cont--box-signupwith {
+  margin-top: 1rem;
+}
+.formsection__cont--box-signupwith p {
+  font-size: 0.95rem;
+}
+.formsection__cont--box-signupwith__options {
+  margin-top: 1rem;
+}
+.formsection__cont--box-signupwith__options a {
+  margin: 0 0.2rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 3rem;
+  background-color: #000;
+  color: #fff;
+}
+.formsection__cont--box-signupwith__options a:nth-child(3) {
+  padding: 0.35rem 0.65rem;
+}
+
+@media (max-width: 480px) {
+  .formsection {
+    padding: 7rem 0 3rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,14 @@
+{
+  "name": "buttons",
+  "version": "1.0.0",
+  "description": "A buttons site to copy style of amazing buttons",
+  "main": "script.js",
+  "scripts": {
+    "compile": "sass SASS/main.scss CSS/style.css -w"
+  },
+  "author": "Localhost Webcoder",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.58.0"
+  }
+}

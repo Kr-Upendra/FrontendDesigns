@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "sass": "^1.58.0"
+  },
+  "name": "our-team",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "compile": "sass SASS/main.scss CSS/styles.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

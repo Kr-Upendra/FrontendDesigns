@@ -1,0 +1,6 @@
+.button {
+  cursor: pointer;
+  font-weight: $weight500;
+  @include noneProperty;
+  letter-spacing: 1px;
+}
